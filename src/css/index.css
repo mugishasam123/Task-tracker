@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  box-shadow: 8px 6px 16px 0;
+}
+
+.main-div {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.tasks {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0;
+  padding: 14px;
+  border-bottom: 2px solid grey;
+}
+
+ul:last-child {
+  border: none;
+}
+
+.delete-icon {
+  display: none;
+}
+
+.add-section > input {
+  border: none;
+}
+
+.task > p > input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+}
+
+.add-section > input:focus {
+  outline: none;
+}
+
+.shared-property {
+  color: grey;
+  font-size: 18px;
+}
+
+.clear-part {
+  text-align: center;
+  padding: 8px;
+  background-color: #f5f5f5;
+}
+
+.fa {
+  color: grey;
+}
+
+.task > p {
+  color: black;
+  font-weight: 500;
+}
