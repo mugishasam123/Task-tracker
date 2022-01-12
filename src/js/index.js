@@ -1,6 +1,6 @@
 import '../css/index.css';
 
-const taskt = document.querySelector('.tasks');
+const taskt = document.querySelector('.main-div');
 
 const tasks = [
   {
