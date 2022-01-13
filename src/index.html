@@ -15,19 +15,20 @@
   </head>
   <body>
     <section class="main">
-      <ul class="main-div">
-        <li class="list-item app-title">
-          <h1 class="shared-property">Today's To Do</h1>
-          <i class="fa fa-sync-alt"></i>
-        </li>
+      <div class="list-item">
+        <p class="shared-property">Today's To Do</p>
+        <i class="fa fa-sync-alt"></i>
+      </div>
 
-        <li class="list-item add-section">
-          <input type="text" placeholder="Add to your list..." />
-          <i class="fa fa-level-up"></i>
-        </li>
+      <p class="list-item add-section">
+        <input type="text" id="task-add" name="addtext" placeholder="Add to your list..." />
+        <i class="fa fa-level-up"></i>
+      </p>
+      <ul class="main-div">
+     
       </ul>
       <div class="clear-part">
-        <p class="shared-property">Clear all completed</p>
+        <button type="button" class="shared-property clear-all">Clear all completed</button>
       </div>
     </section>
   </body>
