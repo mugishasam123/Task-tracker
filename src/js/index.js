@@ -1,5 +1,8 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-unused-vars */
 import '../css/index.css';
+// eslint-disable-next-line import/extensions
+import Interactive from './statusandclearall.js';
 
 const taskt = document.querySelector('.main-div');
 const taskadd = document.querySelector('#task-add');
@@ -11,6 +14,8 @@ const getstorage = () => {
 };
 
 const tasks = getstorage();
+
+const interactive = new Interactive();
 
 const save = () => {
   localStorage.setItem('taskdata', JSON.stringify(tasks));
@@ -25,7 +30,7 @@ const rerender = (tasks) => {
     <input
                   type="checkbox"
                   name=""
-                  id=""
+                  id="statusbox"
       
                 />
               <p  contenteditable="false" class="shared-property editpara">
@@ -44,6 +49,37 @@ const rerender = (tasks) => {
   });
   const editable = document.querySelectorAll('.task');
   const paraedit = document.querySelectorAll('.editpara');
+  const statusBox = document.querySelectorAll('#statusbox');
+
+  const statusUpdate = (status) => {
+    tasks[status].completed = true;
+    localStorage.setItem('taskdata', JSON.stringify(tasks));
+  };
+
+  const statusRemove = (status) => {
+    tasks[status].completed = false;
+    localStorage.setItem('taskdata', JSON.stringify(tasks));
+  };
+
+  statusBox.forEach((box, boxindex) => {
+    box.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        paraedit.forEach((last, lastindex) => {
+          if (lastindex === boxindex) {
+            statusUpdate(lastindex);
+            last.classList.add('line');
+          }
+        });
+      } else {
+        paraedit.forEach((last, lastindex) => {
+          if (lastindex === boxindex) {
+            statusRemove(lastindex);
+            last.classList.remove('line');
+          }
+        });
+      }
+    });
+  });
 
   const deletetask = (indexer) => {
     tasks.splice(indexer, 1);
@@ -59,6 +95,19 @@ const rerender = (tasks) => {
 
   const hoverdelete = document.querySelectorAll('.hover-delete');
   const deletebtn = document.querySelectorAll('.delete-icon');
+
+  const deleteCompleted = (tasks) => {
+    const taskr = tasks.filter((completedtask) => completedtask.completed !== true);
+    taskr.forEach((updatedtask, updatedindex) => {
+      updatedtask.index = updatedindex + 1;
+    });
+    localStorage.setItem('taskdata', JSON.stringify(taskr));
+    cleardom();
+    rerender(taskr);
+  };
+  clearall.addEventListener('click', (e) => {
+    deleteCompleted(tasks);
+  });
 
   const updatetask = (newdescription, atindex) => {
     tasks[atindex].description = newdescription;
