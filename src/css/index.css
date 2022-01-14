@@ -83,6 +83,10 @@ ul:last-child {
   background: white;
 }
 
+.line {
+  text-decoration: line-through;
+}
+
 .editpara:focus {
   outline: none;
 }
