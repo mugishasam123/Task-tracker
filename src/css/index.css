@@ -3,6 +3,11 @@ body {
   justify-content: center;
 }
 
+.goesto {
+  display: flex;
+  align-items: center;
+}
+
 .main {
   width: 100%;
   box-shadow: 8px 6px 16px 0;
@@ -72,6 +77,14 @@ ul:last-child {
 
 .fa {
   color: grey;
+}
+
+.task {
+  background: white;
+}
+
+.editpara:focus {
+  outline: none;
 }
 
 .task > p {
