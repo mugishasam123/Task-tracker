@@ -22,6 +22,7 @@ To get a local copy up and running follow these simple example steps.
 -run the index.html in any browser to get output of the project
 ```
 
+[Live Demo](https://mugishasam123.github.io/todoList-Javascript/)
 
 
 ## Authors
