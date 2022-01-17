@@ -8,8 +8,7 @@ const taskt = document.querySelector('.main-div');
 const taskadd = document.querySelector('#task-add');
 
 const getstorage = () => {
-  const saveddata = localStorage.getItem('taskdata');
-  const array = JSON.parse(saveddata) || [];
+  const array = JSON.parse(localStorage.getItem('taskdata')) || [];
   return array;
 };
 
@@ -17,7 +16,7 @@ const tasks = getstorage();
 
 const interactive = new Interactive();
 
-const save = () => {
+const save = (tasks) => {
   localStorage.setItem('taskdata', JSON.stringify(tasks));
 };
 const cleardom = () => {
