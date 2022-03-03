@@ -1,10 +1,10 @@
-# TodoList
+![](https://img.shields.io/badge/Todolist-blue)
 # Todolist
-> this is the desktop version of mytododlist.
+> Todolist is an app that allows you to track all of your daily activities by setting up activities,editing and removing them .
 
 ![screenshot](./screenshot.png)
 
-this desktop version of my tododlist contains also mobile version 
+
 
 ## Built With
 
@@ -49,7 +49,6 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
