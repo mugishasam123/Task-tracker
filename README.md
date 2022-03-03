@@ -5,24 +5,49 @@
 ![screenshot](./screenshot.png)
 
 
+[Live Demo](https://mugishasam123.github.io/todoList-Javascript/)
 
 ## Built With
 
+- Major languages (JavaScript)
+- Technologies/tools used 
 
-- Major languages : Html , css and javascript
+  
+  ``` bash
+ 
+  - Git(version control)
+  - ESLint(JavaScript linting)
+  - Stylelint(style linting)
 
-- Technologies used :linters,git ,webpack and github
+  ```
 
+
+## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
+### Prerequisites
+ - A text editor(preferably Visual Studio Code)
+### Install
+  -  [Git](https://git-scm.com/downloads)
+  -  [Node](https://nodejs.org/en/download/)
+### Usage
+#### Clone this repository
+
+```bash
+$ git clone https://github.com/mugishasam123/Task-tracker
+.git
+$ cd Task-tracker
+
 ```
--clone the repo in a folder in  your local machine using **git clone command**
--pull the files from origin/master using **git pull command**
--run the index.html in any browser to get output of the project
+#### Run project
+
+```bash
+$ npm install
+$ npm start # this will open it in the browser and enable hot reloading
 ```
 
-[Live Demo](https://mugishasam123.github.io/todoList-Javascript/)
+  <br>
 
 
 ## Authors
@@ -38,7 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/mugishasam123/Task-tracker/issues).
 
 ## Show your support
 
